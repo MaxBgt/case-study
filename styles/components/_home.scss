@@ -1,0 +1,43 @@
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  margin-top: 70px;
+  justify-content: center;
+  .home-container {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin-top: 80px;
+    background-color: #121113;
+    border-radius: 25px;
+    height: 30vh;
+    width: 15vw;
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+  .title {
+    color: #716f75;
+    text-transform: uppercase;
+  }
+  .desc {
+    font-size: 50px;
+    margin: 0;
+    color: rgb(235, 234, 235);
+  }
+  .lastest-test {
+    .list-test {
+      display: flex;
+      flex-direction: column;
+      height: 70%;
+      max-height: 70%;
+      justify-content: space-between;
+      text-align-last: left;
+      list-style: none;
+      padding: 0;
+      font-size: 14px;
+      color: rgb(235, 234, 235);
+    }
+  }
+}

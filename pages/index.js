@@ -1,3 +1,8 @@
+import HomeClientsCard from "@/components/Home/HomeClientsCard";
+import HomeGraph from "@/components/Home/HomeGraph";
+import HomeLatestTest from "@/components/Home/HomeLatestTest";
+import HomeTestsCard from "@/components/Home/HomeTestsCard";
+import HomeTestsInProgressCard from "@/components/Home/HomeTestsInProgressCard";
 import Head from "next/head";
 export default function index() {
   return (
@@ -8,9 +13,14 @@ export default function index() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="clients">
-        <h2>Clients</h2>
-        <p>2150</p>
+      <div className="main-container">
+        <div className="cards-container">
+          <HomeClientsCard />
+          <HomeTestsCard />
+          <HomeTestsInProgressCard />
+          <HomeLatestTest />
+          <HomeGraph />
+        </div>
       </div>
     </div>
   );
