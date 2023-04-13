@@ -1,0 +1,39 @@
+.nav {
+  display: flex;
+  align-items: c e;
+  justify-content: center;
+  height: 90vh;
+  margin-top: 50px;
+  border-radius: 20px;
+  width: 12vw;
+  background-color: #121113;
+
+  .nav-elements {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 0;
+    margin: 0;
+    height: 70%;
+    list-style: none;
+    width: 90%;
+    :hover {
+      color: rgb(235, 234, 235);
+      background-color: rgb(6, 4, 6);
+      border-radius: 20px;
+    }
+
+    a {
+      display: flex;
+      align-items: center;
+      color: #716f75;
+      text-decoration: none;
+    }
+
+    .icon {
+      height: 3vh;
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+  }
+}
