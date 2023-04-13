@@ -1,12 +1,12 @@
 .nav {
   display: flex;
-  align-items: c e;
+
   justify-content: center;
   height: 90vh;
   margin-top: 50px;
   border-radius: 20px;
   width: 15vw;
-  background-color: #121113;
+  background-color: rgb(18, 18, 18);
 
   .nav-elements {
     display: flex;
@@ -18,16 +18,16 @@
     list-style: none;
     width: 90%;
     :hover {
-      transition: 0.8s;
+      transition: 0.3s;
       color: rgb(235, 234, 235);
-      background-color: rgb(6, 4, 6);
+      background-color: rgb(6, 6, 6);
       border-radius: 20px;
     }
 
     a {
       display: flex;
       align-items: center;
-      color: #716f75;
+      color: rgb(141, 145, 154);
       text-decoration: none;
     }
 

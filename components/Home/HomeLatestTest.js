@@ -1,3 +1,5 @@
+import { faCircleChevronRight } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 
 const HomeLatestTest = () => {
@@ -6,11 +8,31 @@ const HomeLatestTest = () => {
       <div className="lastest-test card">
         <h2 className="title">Latest tests</h2>
         <ul className="list-test">
-          <li>- Login Test, Pass</li>
-          <li>- Sign UP Test, Pass</li>
-          <li>- Password Test, Pass</li>
-          <li>- Add Product Test, Fail</li>
-          <li>- Edit Article, Pass</li>
+          <li>
+            - Login Test{" "}
+            <FontAwesomeIcon icon={faCircleChevronRight} className="icon" />
+            <span className="pass">Passed</span>
+          </li>
+          <li>
+            - Sign UP Test{" "}
+            <FontAwesomeIcon icon={faCircleChevronRight} className="icon" />{" "}
+            <span className="pass">Passed</span>
+          </li>
+          <li>
+            - Password Test{" "}
+            <FontAwesomeIcon icon={faCircleChevronRight} className="icon" />{" "}
+            <span className="pass">Passed</span>
+          </li>
+          <li>
+            - Add Product Test{" "}
+            <FontAwesomeIcon icon={faCircleChevronRight} className="icon" />{" "}
+            <span className="fail">Failed</span>
+          </li>
+          <li>
+            - Edit Article{" "}
+            <FontAwesomeIcon icon={faCircleChevronRight} className="icon" />{" "}
+            <span className="pass">Passed</span>
+          </li>
         </ul>
       </div>
     </div>

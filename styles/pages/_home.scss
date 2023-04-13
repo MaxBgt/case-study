@@ -1,0 +1,79 @@
+.stats {
+  position: absolute;
+  margin-top: 80px;
+  margin-bottom: 0;
+  margin-left: 60px;
+  font-weight: 400;
+  color: rgb(242, 242, 242);
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-top: 70px;
+  justify-content: center;
+  .home-container {
+    margin-top: 80px;
+    background-color: rgb(18, 18, 18);
+    border-radius: 32px;
+    height: 30vh;
+    width: 30%;
+
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+  .title {
+    color: rgb(80, 82, 87);
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 17px;
+    margin-top: 35px;
+  }
+  .desc {
+    text-align: center;
+    font-size: 50px;
+    margin: 0;
+    color: rgb(235, 234, 235);
+  }
+  .lastest-test,
+  .in-progress-test {
+    .list-test {
+      display: flex;
+      flex-direction: column;
+      margin-top: 25px;
+      margin-left: 20px;
+      justify-content: space-between;
+      text-align: left;
+      list-style: none;
+      padding: 0;
+      font-size: 20px;
+      color: rgb(235, 234, 235);
+
+      .icon {
+        height: 2vh;
+        margin-right: 10px;
+        margin-left: 5px;
+        color: rgb(80, 82, 87);
+      }
+
+      .pass {
+        color: rgb(87, 180, 124);
+      }
+      .fail {
+        color: rgb(210, 84, 45);
+      }
+      .in-progress {
+        color: rgb(222, 88, 46);
+      }
+    }
+    .list-test li {
+      margin-bottom: 10px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

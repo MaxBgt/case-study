@@ -1,4 +1,5 @@
 import React from "react";
+import TinyAreaChartTest from "../TinyAreaChartTest";
 
 const HomeTestsCard = () => {
   return (
@@ -6,6 +7,7 @@ const HomeTestsCard = () => {
       <div className="tests card">
         <h2 className="title">Total tests</h2>
         <p className="desc">11,050</p>
+        <TinyAreaChartTest />
       </div>
     </div>
   );

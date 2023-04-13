@@ -1,8 +1,13 @@
 body {
-  background-color: #060406;
+  background-color: rgb(6, 6, 6);
+  font-family: "Inter";
 }
 .main-container {
   display: flex;
   justify-content: space-between;
   color: white;
+}
+
+.children {
+  width: 100%;
 }
