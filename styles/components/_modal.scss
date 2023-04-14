@@ -8,7 +8,7 @@
   width: 100%;
   height: 100%;
   overflow: hidden;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: $backgroundCard;
 
   .modal-content {
     display: flex;
@@ -17,7 +17,7 @@
     align-items: center;
     margin: 15% auto;
     padding: 20px;
-    background-color: rgb(18, 18, 18);
+    background-color: $backgroundCard;
     border-radius: 20px;
     width: 80%;
     max-width: 600px;
@@ -26,7 +26,7 @@
       position: absolute;
       top: 295px;
       right: 35%;
-      color: rgb(141, 145, 154);
+      color: $modalMainColor;
       font-size: 30px;
       font-weight: bold;
       cursor: pointer;
@@ -49,19 +49,19 @@
         border-radius: 8px;
         background: transparent;
         text-transform: uppercase;
-        border: 1px solid rgb(141, 145, 154);
+        border: 1px solid $modalMainColor;
 
         &:not(:last-child) {
           margin-bottom: 30px;
         }
         &:focus {
-          color: rgb(141, 145, 154);
+          color: $modalMainColor;
         }
       }
 
       .add-img {
         margin-bottom: 10px;
-        color: rgb(141, 145, 154);
+        color: $modalMainColor;
       }
       input[type="file"] {
         position: relative;
@@ -70,7 +70,7 @@
         cursor: pointer;
       }
       input[type="text"] {
-        color: rgb(141, 145, 154);
+        color: $modalMainColor;
       }
 
       input[type="file"]::before {
