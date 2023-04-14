@@ -4,11 +4,9 @@ import TinyAreaChartTest from "../Charts/TinyAreaChartTest";
 const HomeTestsCard = () => {
   return (
     <div className="home-container">
-      <div className="tests card">
-        <h2 className="title">Total tests</h2>
-        <p className="desc">11,050</p>
-        <TinyAreaChartTest />
-      </div>
+      <h2 className="title">Total tests</h2>
+      <p className="desc">11,050</p>
+      <TinyAreaChartTest />
     </div>
   );
 };

@@ -27,13 +27,14 @@ const ChartTestPassedVsFailed = () => {
         fill="white"
         textAnchor={x > cx ? "start" : "end"}
         dominantBaseline="central"
+        fontSize={12}
       >
         {`${(percent * 100).toFixed(0)}%`}
       </text>
     );
   };
   return (
-    <ResponsiveContainer width="80%" height={300}>
+    <ResponsiveContainer width="80%" height={250}>
       <PieChart>
         <Pie
           data={data}
@@ -41,7 +42,7 @@ const ChartTestPassedVsFailed = () => {
           cy="50%"
           labelLine={false}
           label={renderCustomizedLabel}
-          outerRadius={90}
+          outerRadius={50}
           fill="#8884d8"
           dataKey="value"
         >

@@ -102,3 +102,55 @@
     }
   }
 }
+
+@media (max-width: 768px) {
+  .modal {
+    .modal-content {
+      padding: 15px;
+      max-width: 500px;
+
+      .close {
+        top: 265px;
+        right: 30%;
+      }
+
+      .form {
+        margin-top: 20px;
+
+        .client-name,
+        .project-name,
+        #image-upload,
+        .contact-infos {
+          height: 4vh;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 480px) {
+  .modal {
+    .modal-content {
+      padding: 10px;
+      max-width: 300px;
+      .close {
+        top: 235px;
+        right: 25%;
+        font-size: 25px;
+      }
+      .form {
+        margin-top: 20px;
+
+        .client-name,
+        .project-name,
+        #image-upload,
+        .contact-infos {
+          height: 4vh;
+        }
+
+        .submit {
+          width: 50%;
+        }
+      }
+    }
+  }
+}

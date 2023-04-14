@@ -1,9 +1,8 @@
 .nav {
   display: flex;
-
   justify-content: center;
   height: 90vh;
-  margin-top: 50px;
+  margin-top: 3%;
   border-radius: 20px;
   width: 15vw;
   background-color: rgb(18, 18, 18);
@@ -17,19 +16,22 @@
     height: 70%;
     list-style: none;
     width: 90%;
+
     :hover {
       transition: 0.3s;
       color: rgb(235, 234, 235);
       background-color: rgb(6, 6, 6);
       border-radius: 20px;
     }
+
     .logo {
-      height: 60px;
-      width: 50px;
+      height: 8%;
+      width: 80%;
       margin: 0 auto;
       padding: 0;
       color: rgb(217, 172, 78);
     }
+
     a {
       display: flex;
       align-items: center;
@@ -39,8 +41,49 @@
 
     .icon {
       height: 3vh;
-      margin-left: 20px;
-      margin-right: 20px;
+      margin-left: 1rem;
+      margin-right: 1rem;
     }
+  }
+}
+@media (max-width: 1024px) {
+  .nav {
+    height: auto;
+    width: 100%;
+    flex-direction: row;
+  }
+
+  .nav .nav-elements {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+  }
+
+  .nav .nav-elements .logo {
+    display: none;
+  }
+}
+
+@media (max-width: 950px) {
+  .nav-elements {
+    display: none;
+  }
+  .nav .nav-elements .icon {
+    height: 15px;
+  }
+  .nav.show-menu .nav-elements {
+    display: flex;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav .nav-elements {
+    height: 90%;
+  }
+  .icon {
+    display: none;
+  }
+  .nav .nav-elements a {
+    font-size: 12px;
   }
 }

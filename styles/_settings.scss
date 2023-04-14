@@ -11,3 +11,11 @@ body {
 .children {
   width: 100%;
 }
+@media (max-width: 1024px) {
+  body {
+    overflow: visible;
+  }
+  .main-container {
+    flex-direction: column;
+  }
+}

@@ -1,8 +1,8 @@
-h1 {
+.home_title {
   position: absolute;
-  margin-top: 80px;
+  margin-top: 5%;
   margin-bottom: 0;
-  margin-left: 60px;
+  margin-left: 3%;
   font-weight: 400;
   color: rgb(242, 242, 242);
 }
@@ -11,50 +11,54 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  margin-top: 70px;
+  margin-top: 5%;
   justify-content: center;
+
   .home-container {
-    margin-top: 80px;
+    margin-top: 5%;
     background-color: rgb(18, 18, 18);
     border-radius: 32px;
     height: 30vh;
-    width: 30%;
+    width: 31%;
 
     &:not(:last-child) {
-      margin-right: 20px;
+      margin-right: 1%;
     }
   }
+
   .title {
     color: rgb(80, 82, 87);
     text-align: center;
     text-transform: uppercase;
-    font-size: 17px;
-    margin-top: 35px;
+    font-size: 1.2rem;
+    margin-top: 5%;
   }
+
   .desc {
     text-align: center;
-    font-size: 50px;
+    font-size: 3rem;
     margin: 0;
     color: rgb(235, 234, 235);
   }
+
   .lastest-test,
   .in-progress-test {
     .list-test {
       display: flex;
       flex-direction: column;
-      margin-top: 25px;
-      margin-left: 20px;
+      margin-top: 5%;
+      margin-left: 2%;
       justify-content: space-between;
       text-align: left;
       list-style: none;
       padding: 0;
-      font-size: 20px;
+      font-size: 1.2rem;
       color: rgb(235, 234, 235);
 
       .icon {
         height: 2vh;
-        margin-right: 10px;
-        margin-left: 5px;
+        margin-right: 1%;
+        margin-left: 1%;
         color: rgb(80, 82, 87);
       }
 
@@ -68,11 +72,66 @@ h1 {
         color: rgb(222, 88, 46);
       }
     }
+
     .list-test li {
-      margin-bottom: 10px;
+      margin-bottom: 2%;
 
       &:last-child {
         margin-bottom: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 950px) {
+  .home_title {
+    margin-left: 10%;
+  }
+
+  .cards-container {
+    margin-top: 10%;
+    .home-container {
+      width: 80%;
+      margin-bottom: 3%;
+
+      &:not(:last-child) {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .home_title {
+    text-align: center;
+    font-size: 24px;
+    margin-top: 13%;
+  }
+
+  .cards-container {
+    margin-top: 20%;
+
+    .home-container {
+      margin-top: 5%;
+      height: auto;
+    }
+
+    .title {
+      font-size: 1rem;
+    }
+
+    .desc {
+      font-size: 2.5rem;
+    }
+
+    .lastest-test,
+    .in-progress-test {
+      .list-test {
+        font-size: 1rem;
+      }
+
+      .icon {
+        height: 1.5vh;
       }
     }
   }

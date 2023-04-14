@@ -1,4 +1,24 @@
 .recharts-responsive-container {
-  margin-top: -46px;
+  margin-top: -4.5vh;
   margin-left: 30px;
+}
+
+@media (max-width: 950px) {
+  .recharts-responsive-container {
+    margin-top: -12%;
+    margin-left: 30px;
+  }
+}
+@media (max-width: 850px) {
+  .recharts-responsive-container {
+    margin-top: 0%;
+    margin-left: 30px;
+  }
+}
+
+@media (max-width: 780px) {
+  .recharts-responsive-container {
+    margin-top: -4%;
+    margin-left: 30px;
+  }
 }
