@@ -116,19 +116,21 @@
 }
 
 @media (max-width: 768px) {
+  .client-title {
+    top: 80px;
+  }
   .add-clients {
     right: 2%;
-    top: 60px;
+    top: 120px;
   }
-
   .projects-container {
-    margin-top: 8%;
+    margin-top: 15%;
     margin-left: 2%;
 
     .client-card {
       flex-direction: column;
       align-items: center;
-      margin-right: 0;
+      margin-right: 10px;
 
       .infos {
         align-items: center;
@@ -157,10 +159,10 @@
   .client-title {
     text-align: center;
     font-size: 24px;
-    margin-top: 13%;
+    margin-top: 5%;
   }
   .add-clients {
-    top: 100px;
+    top: 90px;
   }
 
   .projects-container {

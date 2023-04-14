@@ -34,7 +34,7 @@ const ChartTestPassedVsFailed = () => {
     );
   };
   return (
-    <ResponsiveContainer width="80%" height={250}>
+    <ResponsiveContainer width="80%" height={300} className={"tested"}>
       <PieChart>
         <Pie
           data={data}
