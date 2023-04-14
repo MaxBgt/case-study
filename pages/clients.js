@@ -1,80 +1,74 @@
-import React from "react";
+import React, { useState } from "react";
 import Modal from "../components/modal";
-const clients = () => {
+
+const initialProjects = [
+  {
+    clientName: "Booki Agency",
+    projectName: "Booki",
+    image: "/images/booki.jpg",
+    clientId: "C8D2M5N3",
+    projectId: "P1Z7G6H4",
+    email: "bookiagency@booki.com",
+  },
+  {
+    clientName: "Gaming Campus",
+    projectName: "Gaming Campus Project",
+    image: "/images/gaming-campus.jpg",
+    clientId: "C1AB56R2",
+    projectId: "P3T9K0MF",
+    email: "gaming-campus@gaming.com",
+  },
+  {
+    clientName: "Kasa",
+    projectName: "Kasa Project",
+    image: "/images/kasa.jpg",
+    clientId: "C4R9E0J6",
+    projectId: "P5B3F2Q1",
+    email: "kasa-company@kasa.com",
+  },
+];
+
+const Clients = () => {
+  const [projects, setProjects] = useState(initialProjects);
+
+  const addProjects = (project) => {
+    setProjects((prevProjects) => [...prevProjects, project]);
+  };
+
   return (
     <>
-      <div className="header">
-        <h1 className="page_tilte">Clients</h1>
-        <Modal />
-      </div>
+      <h1 className="page_title">Clients</h1>
+      <Modal addProjects={addProjects} />
       <div className="projects-container">
-        <div className="client-card">
-          <img src="/images/booki.jpg" alt="Booki" className="img-project" />
-          <div className="infos">
-            <h2 className="clients-name">Booki Agency</h2>
-            <ul className="infos-projects">
-              <li className="client-id">
-                <span className="li-title">Client ID</span>{" "}
-                <span className="id">C8D2M5N3</span>
-              </li>
-              <li className="project-id">
-                <span className="li-title">Project ID</span>
-                <span className="id">P1Z7G6H4</span>
-              </li>
-              <li className="contact">
-                <span className="li-title">Contact</span>{" "}
-                <span className="mail">bookiagency@booki.com</span>
-              </li>
-            </ul>
+        {projects.map((project, index) => (
+          <div key={index} className="client-card">
+            <img
+              src={project.image}
+              alt={project.projectName}
+              className="img-project"
+            />
+            <div className="infos">
+              <h2 className="clients-name">{project.clientName}</h2>
+              <ul className="infos-projects">
+                <li className="client-id">
+                  <span className="li-title">Client ID</span>{" "}
+                  <span className="id">{project.clientId}</span>
+                </li>
+                <li className="project-id">
+                  <span className="li-title">Project ID</span>
+                  <span className="id">{project.projectId}</span>
+                </li>
+                <li className="contact">
+                  <span className="li-title">Contact</span>{" "}
+                  <span className="mail">{project.email}</span>
+                </li>
+              </ul>
+            </div>
           </div>
-        </div>
-        <div className="client-card">
-          <img
-            src="/images/gaming-campus.jpg"
-            alt="Booki"
-            className="img-project"
-          />
-          <div className="infos">
-            <h2 className="clients-name">Gaming Campus</h2>
-            <ul className="infos-projects">
-              <li className="client-id">
-                <span className="li-title">Client ID</span>{" "}
-                <span className="id">C1AB56R2</span>
-              </li>
-              <li className="project-id">
-                <span className="li-title">Project ID</span>
-                <span className="id">P3T9K0MF</span>
-              </li>
-              <li className="contact">
-                <span className="li-title">Contact</span>{" "}
-                <span className="mail">gaming-campus@gaming.com</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div className="client-card">
-          <img src="/images/kasa.jpg" alt="Booki" className="img-project" />
-          <div className="infos">
-            <h2 className="clients-name">Kasa</h2>
-            <ul className="infos-projects">
-              <li className="client-id">
-                <span className="li-title">Client ID</span>{" "}
-                <span className="id">C4R9E0J6</span>
-              </li>
-              <li className="project-id">
-                <span className="li-title">Project ID</span>
-                <span className="id">P5B3F2Q1</span>
-              </li>
-              <li className="contact">
-                <span className="li-title">Contact</span>{" "}
-                <span className="mail">kasa-company@kasa.com</span>
-              </li>
-            </ul>
-          </div>
-        </div>
+        ))}
       </div>
     </>
   );
 };
 
-export default clients;
+export default Clients;
