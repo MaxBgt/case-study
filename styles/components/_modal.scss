@@ -103,6 +103,30 @@
   }
 }
 
+@media (max-width: 950px) {
+  .modal {
+    .modal-content {
+      padding: 15px;
+      max-width: 500px;
+
+      .close {
+        top: 130px;
+        right: 20%;
+      }
+
+      .form {
+        margin-top: 20px;
+
+        .client-name,
+        .project-name,
+        #image-upload,
+        .contact-infos {
+          height: 4vh;
+        }
+      }
+    }
+  }
+}
 @media (max-width: 768px) {
   .modal {
     .modal-content {
@@ -110,8 +134,8 @@
       max-width: 500px;
 
       .close {
-        top: 265px;
-        right: 30%;
+        top: 120px;
+        right: 20%;
       }
 
       .form {
@@ -133,8 +157,8 @@
       padding: 10px;
       max-width: 300px;
       .close {
-        top: 235px;
-        right: 25%;
+        top: 60px;
+        right: 10%;
         font-size: 25px;
       }
       .form {
