@@ -1,5 +1,5 @@
 import React from "react";
-import ChartTestPassedVsFailed from "../ChartTestPassedVsFailed";
+import ChartTestPassedVsFailed from "../Charts/ChartTestPassedVsFailed";
 
 const HomeGraph = () => {
   return (

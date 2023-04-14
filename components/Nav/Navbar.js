@@ -1,5 +1,6 @@
 import {
   faFlaskVial,
+  faGears,
   faHome,
   faListCheck,
   faUsers,
@@ -12,6 +13,7 @@ const Navbar = () => {
   return (
     <div className="nav">
       <ul className="nav-elements">
+        <FontAwesomeIcon icon={faGears} className="logo" />
         <li className="home">
           <Link href="/">
             <FontAwesomeIcon icon={faHome} className="icon" />

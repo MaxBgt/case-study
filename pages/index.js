@@ -14,7 +14,7 @@ export default function index() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="main-container">
-        <h1 className="stats">Stats</h1>
+        <h1 className="page_tilte">Stats</h1>
         <div className="cards-container">
           <HomeClientsCard />
           <HomeTestsCard />

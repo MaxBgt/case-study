@@ -1,5 +1,5 @@
 import React from "react";
-import TinyAreaChartTest from "../TinyAreaChartTest";
+import TinyAreaChartTest from "../Charts/TinyAreaChartTest";
 
 const HomeTestsCard = () => {
   return (
