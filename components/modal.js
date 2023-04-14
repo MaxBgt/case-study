@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export default function Modal({ addProjects }) {
   const [showModal, setShowModal] = useState(false);
@@ -6,6 +6,26 @@ export default function Modal({ addProjects }) {
   const [projectName, setProjectName] = useState("");
   const [email, setEmail] = useState("");
   const [image, setImage] = useState("");
+  const modalRef = useRef(null);
+
+  useEffect(() => {
+    const handleKeyDown = (event) => {
+      if (event.keyCode === 27) {
+        setShowModal(false);
+      }
+    };
+    const handleClickOutside = (event) => {
+      if (modalRef.current && !modalRef.current.contains(event.target)) {
+        setShowModal(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    document.addEventListener("keydown", handleKeyDown);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [modalRef]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -20,6 +40,7 @@ export default function Modal({ addProjects }) {
     setEmail("");
     setShowModal(false);
   };
+
   return (
     <>
       <span className="add-clients" onClick={() => setShowModal(true)}>
@@ -27,7 +48,7 @@ export default function Modal({ addProjects }) {
       </span>
 
       {showModal && (
-        <div className="modal">
+        <div className="modal" ref={modalRef}>
           <div className="modal-content">
             <span className="close" onClick={() => setShowModal(false)}>
               &times;
